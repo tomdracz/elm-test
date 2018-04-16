@@ -2,14 +2,16 @@ module Hello exposing (..)
 
 import Html exposing (text)
 
-square =
-    \n -> n^2
+square : Int -> Int
+square n =
+    n^2
 
+meaning : Int
 meaning =
     square 7 - 7
 
 main =
     meaning
-    |> toString
-    |> (++) "The meaning of life is: "
-    |>  text
+        |> toString
+        |> (++) "The meaning of life is: "
+        |>  text
