@@ -13,12 +13,16 @@ type Meaning
     | OtherMeaning
 
 
+type alias TrueMeaning =
+    Int
+
+
 meaning : Int
 meaning =
     square 7 - 7
 
 
-meaningOfLife : Meaning -> Int
+meaningOfLife : Meaning -> TrueMeaning
 meaningOfLife answer =
     case answer of
         OfLife ->
